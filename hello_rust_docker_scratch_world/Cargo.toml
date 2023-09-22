@@ -3,6 +3,16 @@ name = "hello_rust_docker_scratch_world"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+codegen-units = 1
+opt-level = "z" 
+debug = false
+overflow-checks = false
+strip = true
+debug-assertions = false
+lto = true
+panic = "abort"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
